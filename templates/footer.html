@@ -1,0 +1,68 @@
+<a name="{{ data.navbar['contact'] }}"></a>
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">{{ data.footer_contact }}</h3>
+				<div class="widget-body">
+					<p>+234 23 9873237<br>
+						<a href="mailto:#">{{ data.fake_email }}</a><br>
+						<br>
+						{{ data.fake_address }}
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">{{ data.footer_social }}</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href=""><i class="fa fa-twitter fa-2"></i></a>
+						<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+						<a href=""><i class="fa fa-github fa-2"></i></a>
+						<a href=""><i class="fa fa-facebook fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">{{ data.footer_widget }}</h3>
+				<div class="widget-body">
+					<p>
+						{{ data.main_text }}
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget"></div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>{{ data.fake_address }}</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						<a href="{{ data.template_url }}" rel="designer">{{ data.download }}</a></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static',filename='js/template.js') }}"></script>
+</body>
+</html>

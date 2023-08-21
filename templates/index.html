@@ -1,0 +1,75 @@
+{% include "header.html" %}
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row section topspace">
+			<div class="col-md-12">
+				<p class="lead text-center text-muted">
+					{{ data.main_text }}
+				</p>
+			</div>
+		</div> <!-- / section -->
+
+		<a name="{{ data.navbar['skills'] }}"></a>
+		<div class="row section featured topspace">
+			<h2 class="section-title"><span>{{ data.skills_label }}</span></h2>
+			<div class="row">
+				{% for skill, desc in data.skills.items() %}
+				<div class="col-sm-6 col-md-3">
+					<h3 class="text-center">{{ skill }}</h3>
+					<p>{{ desc }}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div> <!-- / section -->
+
+		<a name="{{ data.navbar['my portfolio'] }}"></a>
+		<div class="row section recentworks topspace">
+
+			<h2 class="section-title"><span>{{ data.portfolio_label }}</span></h2>
+
+			<div class="thumbnails recentworks row">
+
+				{% for project in data.portfolio %}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<a class="thumbnail" href="#">
+						<span class="img">
+							<img src="{{ url_for('static',filename='image/s1.jpg') }}" alt="">
+						</span>
+						<span class="title">{{ project }}</span>
+					</a>
+					<span class="details"></span>
+					<h4></h4>
+					<p></p>
+				</div>
+				{% endfor %}
+
+		</div> <!-- /section -->
+
+		<div class="row section topspace">
+			<div class="panel panel-cta"><div class="panel-body">
+				<div class="col-lg-8">
+					<p>{{ data.main_text }}</p>
+				</div>
+				<div class="col-lg-4 text-right">
+					<a href="{{ data.template_url }}" class="btn btn-primary btn-lg">{{ data.download }}</a>
+				</div>
+			</div></div>
+		</div> <!-- /section -->
+
+		<div class="row section clients topspace">
+			<h2 class="section-title"><span>{{ data.clients }}</span></h2>
+			<div class="col-lg-12">
+				<p>
+					<img src="{{ url_for('static',filename='image/sample_clients.png') }}" alt="">
+				</p>
+			</div>
+		</div> <!-- /section -->
+
+	</div>	<!-- /container -->
+
+</main>
+
+{% include "footer.html" %}
